@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: 파이썬 패키지 확인
-      run: pip list
+      run: pip install -r requirements.txt | pip list | grep beautifulsoup
     - name: test.py 확인
       run: ls -al | grep test.py
     - name: 파이썬 코드 실행
