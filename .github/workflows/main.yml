@@ -16,4 +16,4 @@ jobs:
     - name: 4. 환경 설정
       run: pip install -r requirements.txt
     - name: 5. 파이썬 실행
-      run: python githubactiontest.py
+      run: python test.py
