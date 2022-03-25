@@ -15,13 +15,13 @@ jobs:
     - name: 2. 환경 설정
       run: pip install -r requirements.txt
     - name: 3. 파이썬 실행
-      run: python test.py
+      run: python main.py
     - name: Commit files
       run: |
         git config --local user.email "rukidding918@gmail.com"
         git config --local user.name "rukidding918"
         git add .
-        git commit -m "Run crawler and update current data"
+        git commit -m "Run scraper and update index.html"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
