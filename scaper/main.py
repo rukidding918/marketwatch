@@ -1,9 +1,9 @@
 from pykrx import stock
-from scraper.scraper import get_index_data
-from scraper.visualizer import visualize
+from scraper import get_index_data
+from visualizer import visualize
 
 
-if __name__ == '__main__':
+def main():
     kospi_start = stock.get_index_listing_date('KOSPI').loc['코스피']['발표시점'].replace('.', '')
     kosdaq_start = stock.get_index_listing_date('KOSDAQ').loc['코스닥']['발표시점'].replace('.', '')
     end = date.today().strftime('%Y%m%d')
@@ -18,3 +18,6 @@ if __name__ == '__main__':
             }
 
     visualize(data=data, benchmark=benchmark, overlaps=overlaps)
+
+if __name__ == '__main__':
+    main()
