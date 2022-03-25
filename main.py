@@ -1,6 +1,6 @@
 from pykrx import stock
-from scraper import get_index_data
-from visualizer import visualize
+from scraper.scraper import get_index_data
+from scraper.visualizer import visualize
 
 
 def main():
