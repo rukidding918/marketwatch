@@ -1,3 +1,4 @@
+from datetime import date
 from pykrx import stock
 from scraper.scraper import get_index_data
 from scraper.visualizer import visualize
