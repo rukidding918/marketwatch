@@ -38,6 +38,6 @@ def visualize(data=None, benchmark='종가', overlaps=['PBR']):
 
             fig.add_shape(type='line', x0=df.index[0], y0=mean, x1=df.index[-1], y1=mean, row=row, col=col)
 
-    fig.save_html('index.html')
+    fig.write_html('index.html')
 
     return 
