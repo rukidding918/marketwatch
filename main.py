@@ -5,8 +5,10 @@ from scraper.visualizer import visualize
 
 
 def main():
-    kospi_start = stock.get_index_listing_date('KOSPI').loc['코스피']['발표시점'].replace('.', '')
-    kosdaq_start = stock.get_index_listing_date('KOSDAQ').loc['코스닥']['발표시점'].replace('.', '')
+    # kospi_start = stock.get_index_listing_date('KOSPI').loc['코스피']['발표시점'].replace('.', '')
+    # kosdaq_start = stock.get_index_listing_date('KOSDAQ').loc['코스닥']['발표시점'].replace('.', '')
+    kospi_start = '20080101'
+    kosdaq_start = '20080101'
     end = date.today().strftime('%Y%m%d')
 
     korea = {'KOSPI': '1001', 'KOSDAQ': '2001'}
