@@ -23,7 +23,7 @@ def visualize(data=None, benchmark='종가', overlaps=['PBR']):
                         specs=specs,
                         subplot_titles=tuple(subplot_titles),
                         # shared_xaxes=True,
-                        vertical_spacing=1/(rows-1),
+                        # vertical_spacing=1/(rows-1),
                         )
     for row, (key, df) in enumerate(data.items(), start=1):
         for col, overlap in enumerate(overlaps, start=1):
