@@ -21,7 +21,7 @@ def main():
 #             }
     
     start = '20200101'
-    data = {key: get_index_data(start, end, korea[key]) for key, value in korea.items()]
+    data = {key: get_index_data(start, end, korea[key]) for key, value in korea.items()}
 
     visualize(data=data, benchmark=benchmark, overlaps=overlaps)
 
