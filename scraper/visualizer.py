@@ -11,7 +11,13 @@ def visualize(data=None, benchmark='종가', overlaps=['PBR']):
     cols = len(overlaps)
 
     specs = [[{"secondary_y": True}] * cols] * rows
-    subplot_titles = [f'{key} {benchmark}와 {overlap}' for key in data for overlap in overlaps]
+    subplot_titles = []
+    for key in data:
+        for overlap in overlaps:
+            last_day = data[key].index[-1].strftime('%Y-%m-%d')
+            ratio = str(data[key][overlap][-1])
+            subplot_titles.append(f'{key} {benchmark}와 {overlap}<br>{last_day}: {ratio}')
+    # subplot_titles = [f'{key} {benchmark}와 {overlap}' for key in data for overlap in overlaps]
 
     fig = make_subplots(rows=rows, cols=cols, 
                         specs=specs,
