@@ -1,8 +1,9 @@
 name: update index.html
 
-on:
-  schedule:
-    - cron: '0 15 * * *'
+# on:
+#   schedule:
+#     - cron: '0 15 * * *'
+on: [push]
 
 jobs:
   build:
